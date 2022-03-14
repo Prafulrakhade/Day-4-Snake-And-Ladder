@@ -64,5 +64,59 @@ namespace SnakeAndLadder
             }
 
         }
+
+        public void UC_4_RepeatTillWin()
+        {
+            int ladder = 1;
+            int snake = 2;
+            //int ladDie;
+            //int snkDie;
+            int win = 100;
+            int number = 0;
+
+            while (number <= win)
+            {
+                number++;
+                if (number >= 0)
+                {
+                    int randomCheck;
+                    Random random = new Random();
+                    randomCheck = random.Next(3);
+
+                    switch (randomCheck)
+                    {
+                        case 1:
+                            {
+                                Random random1 = new Random();
+                                ladder = random1.Next(1, 7);
+                                number = number + ladder;
+                                Console.WriteLine("You Got A Ladder ");
+                                break;
+                            }
+                        case 2:
+                            {
+                                Random random2 = new Random();
+                                snake = random2.Next(1, 7);
+                                number = number - snake;
+                                Console.WriteLine("You Got A Snake");
+                                break;
+                            }
+                        default:
+                            {
+                                Console.WriteLine("You Not Play");
+                                break;
+                            }
+                    }
+
+                }
+                else
+                {
+                    number = 0;
+                }
+
+            }
+            Console.WriteLine(" Congratulation! you won " + number);
+        }
+
     }
 }
