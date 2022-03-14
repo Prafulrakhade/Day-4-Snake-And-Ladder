@@ -175,5 +175,66 @@ namespace SnakeAndLadder
             }
             Console.WriteLine(" Congratulation! you won " + number);
         }
+
+        public void UC_6_ReportTheNumberOfTimes()
+        {
+            int ladder = 1;
+            int snake = 2;
+            int ladDie = 0;
+            int snkDie;
+            int win = 100;
+            int number = 0;
+            int numOfRoll = 0;
+            int store = 0;
+
+            while (number != win)
+            {
+                if (number >= 0 && number < 100)
+                {
+                    int randomCheck;
+                    Random random = new Random();
+                    randomCheck = random.Next(3);
+                    numOfRoll++;
+
+                    switch (randomCheck)
+                    {
+                        case 1:
+                            {
+                                Console.WriteLine("You Got A Ladder And Position : " + number);
+                                Random random1 = new Random();
+                                ladDie = random1.Next(1, 7);
+                                number = number + ladDie;
+                                store = number;
+                                break;
+                            }
+                        case 2:
+                            {
+                                Random random2 = new Random();
+                                snkDie = random2.Next(1, 7);
+                                number = number - snkDie;
+                                Console.WriteLine("You Got A Snake And Position : " + number);
+                                break;
+                            }
+                        default:
+                            {
+                                Console.WriteLine("You Not Play And Position : " + number);
+                                break;
+                            }
+                    }
+
+                }
+                else if (store > 100)
+                {
+                    number = store - ladDie;
+                }
+                else
+                {
+                    number = 0;
+                }
+
+            }
+            Console.WriteLine("Total Number Of Roll Dice : " + numOfRoll);
+            Console.WriteLine(" Congratulation! you won " + number);
+        }
     }
 }

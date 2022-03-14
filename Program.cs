@@ -12,6 +12,7 @@ namespace SnakeAndLadder
             check.UC_3_CheckOptions();
             check.UC_4_RepeatTillWin();
             check.UC_5_EnsureWinPosition();
+            check.UC_6_ReportTheNumberOfTimes();
         }
     }
 }
