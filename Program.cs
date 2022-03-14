@@ -9,6 +9,7 @@ namespace SnakeAndLadder
             Game check = new Game();
             check.UC_1_Player();
             check.UC_2_RollDice();
+            check.UC_3_CheckOptions();
         }
     }
 }

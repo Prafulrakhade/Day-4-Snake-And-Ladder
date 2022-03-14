@@ -29,5 +29,40 @@ namespace SnakeAndLadder
             Console.WriteLine("You Get a Die Number is = " + randomCheck);
             Console.WriteLine("                                                                     ");
         }
+
+        public void UC_3_CheckOptions()
+        {
+            int ladder = 1;
+            int snake = 2;
+            int randomCheck;
+            Random random = new Random();
+            randomCheck = random.Next(3);
+            switch (randomCheck)
+            {
+                case 1:
+                    {
+                        Random random1 = new Random();
+                        ladder = random1.Next(1, 7);
+                        Console.WriteLine(" Great! You Got A Ladder");
+                        Console.WriteLine("                                                            ");
+                        break;
+                    }
+                case 2:
+                    {
+                        Random random2 = new Random();
+                        snake = random2.Next(1, 7);
+                        Console.WriteLine(" Ohh! You Got A Snake");
+                        Console.WriteLine("                                                            ");
+                        break;
+                    }
+                default:
+                    {
+                        Console.WriteLine("You Not Play");
+                        Console.WriteLine("                                                            ");
+                        break;
+                    }
+            }
+
+        }
     }
 }
