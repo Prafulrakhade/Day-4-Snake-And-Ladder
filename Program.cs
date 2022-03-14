@@ -10,6 +10,7 @@ namespace SnakeAndLadder
             check.UC_1_Player();
             check.UC_2_RollDice();
             check.UC_3_CheckOptions();
+            check.UC_4_RepeatTillWin();
         }
     }
 }
